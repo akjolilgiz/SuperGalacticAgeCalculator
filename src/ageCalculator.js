@@ -30,9 +30,10 @@ getYearInJupiter(age){
 }
 getLifeExpectancyOnEarth(status){
   let userLifeExpectancy = 0;
-  if (status === "Yes") {
+  if(this.age < lifeExpectancy){if (status === "Yes") {
     userLifeExpectancy = lifeExpectancy - 10 - this.age}
     else {userLifeExpectancy = lifeExpectancy - this.age}
+  } else if (this.age > lifeExpectancy){ userLifeExpectancy = this.age - lifeExpectancy}
     return userLifeExpectancy;
   }
 }

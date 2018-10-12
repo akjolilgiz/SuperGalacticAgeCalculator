@@ -20,7 +20,7 @@ _None._
 
 ## Support and contact details
 * akjolilgiz@gmail.com
-* https://github.com/akjolilgiz/wordCounter-withUI/tree/master/SuperGalacticAgeCalculator
+* https://github.com/akjolilgiz/SuperGalacticAgeCalculator
 
 ## Specs
 |#|Spec Description|Input|Expected Output|

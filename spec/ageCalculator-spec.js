@@ -47,4 +47,11 @@ describe('AgeCalculator test', function() {
     expect(result).toEqual(Math.floor(59/11.86));
   });
 
+  it('should return amount of years a user has lived past life expectancy', function() {
+    let newAgeCalculator = new AgeCalculator(78);
+    let status = "No"
+    let result = newAgeCalculator.getLifeExpectancyOnEarth(status);
+    expect(result).toEqual(1);
+  });
+
 });

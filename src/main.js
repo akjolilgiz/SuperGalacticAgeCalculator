@@ -19,13 +19,20 @@ $(document).ready(function() {
     let ageInMars = ageCalculator.getYearInMars(age);
     let ageInJupiter = ageCalculator.getYearInJupiter(age);
     let userLifeExpectancy = ageCalculator.getLifeExpectancyOnEarth(status);
-
-    $("#yearOfBirth").text("You were born in : " + yearOfBirth);
-    $("#ageInMercury").text(" Your age in Mercury : " + ageInMercury);
-    $("#ageInVenus").text(" Your age in Mercury : " + ageInVenus);
-    $("#ageInMars").text(" Your age in Mercury : " + ageInMars);
-    $("#ageInJupiter").text(" Your age in Mercury : " + ageInJupiter);
-    $("#lifeExpectancy").text(" You have " + userLifeExpectancy + " years to live on earth");
+    let userLifeExpectancyOnMercury = ageCalculator.getYearInMercury(userLifeExpectancy);
+    let userLifeExpectancyOnVenus = ageCalculator.getYearInVenus(userLifeExpectancy);
+    let userLifeExpectancyOnMars = ageCalculator.getYearInMars(userLifeExpectancy);
+    let userLifeExpectancyOnJupiter = ageCalculator.getYearInJupiter(userLifeExpectancy);
+    $("#yearOfBirth").text("You were born in " + yearOfBirth);
+    $("#ageInMercury").text(" Your are " + ageInMercury + " years old in Mercury");
+    $("#ageInVenus").text(" Your are " + ageInVenus + " years old in Venus");
+    $("#ageInMars").text(" Your age " + ageInMars + " years old in Mars");
+    $("#ageInJupiter").text(" Your age : " + ageInJupiter + " years old in Jupiter");
+    $("#lifeExpectancy").text(" You will die in " + userLifeExpectancy + " years on earth");
+    $("#lifeExpectancyOnMercury").text(" You will die in " + userLifeExpectancyOnMercury + " years on Mercury");
+    $("#lifeExpectancyOnVenus").text(" You will die in " + userLifeExpectancyOnVenus + " years on Venus");
+    $("#lifeExpectancyOnMars").text(" You will die in " + userLifeExpectancyOnMars + " years on Mars");
+    $("#lifeExpectancyOnJupiter").text(" You will die in " + userLifeExpectancyOnJupiter + " years on Jupiter");
 
   });
 

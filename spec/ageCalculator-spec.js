@@ -27,5 +27,16 @@ describe('AgeCalculator test', function() {
     let result = newAgeCalculator.getYearInJupiter(18);
     expect(result).toEqual(Math.floor(18/11.86));
   });
+  it('should return amount of years a user has left to live', function() {
+    let newAgeCalculator = new AgeCalculator(18);
+    let result = newAgeCalculator.getLifeExpectancyOnEarth(18);
+    expect(result).toEqual(77-18);
+  });
+  it('should return amount of years a user has left to live in Mercury time', function() {
+    let newAgeCalculator = new AgeCalculator(18);
+    let lifeExpectancyOnEarth = newAgeCalculator.getLifeExpectancyOnEarth(18);
+    let result = newAgeCalculator.getYearInJupiter(lifeExpectancyOnEarth);
+    expect(result).toEqual(Math.floor(59/11.86));
+  });
 
 });

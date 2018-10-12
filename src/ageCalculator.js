@@ -27,4 +27,8 @@ getYearInJupiter(age){
   let jupiterYear = Math.floor(age/11.86);
   return jupiterYear;
 }
+getLifeExpectancyOnEarth(){
+  let yearsLeft = lifeExpectancy - this.age;
+  return yearsLeft;
+}
 }

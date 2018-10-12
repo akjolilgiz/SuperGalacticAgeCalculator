@@ -1,30 +1,30 @@
 let anchor = new Date();
-const lifeExpectancy = 77;
+let lifeExpectancy = 77;
 
 export class AgeCalculator {
   constructor(age){
     this.age = age;
   }
 
-getYear(){
-  let userYear = (anchor.getFullYear()-this.age);
+getYearOfBirth(age){
+  let userYear = (anchor.getFullYear()-age);
   return userYear;
 }
 
-getYearInMercury(){
-  mercuryYear = math.floor(this.age/.24);
+getYearInMercury(age){
+  let mercuryYear = Math.floor(age/.24);
   return mercuryYear;
 }
-getYearInVenus(){
-  venusYear = math.floor(this.age/.64);
-  return mercuryYear;
+getYearInVenus(age){
+  let venusYear = Math.floor(age/.64);
+  return venusYear;
 }
-getYearInMars(){
-  marsYear = math.floor(this.age/1.88);
+getYearInMars(age){
+  let marsYear = Math.floor(age/1.88);
   return marsYear;
 }
-getYearInJupiter(){
-  jupiterYear = math.floor(this.age/11.86);
+getYearInJupiter(age){
+  let jupiterYear = Math.floor(age/11.86);
   return jupiterYear;
 }
 }

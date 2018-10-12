@@ -18,6 +18,7 @@ getYearInMercury(age){
 getYearInVenus(age){
   let venusYear = Math.floor(age/.64);
   return venusYear;
+  console.log(venusYear);
 }
 getYearInMars(age){
   let marsYear = Math.floor(age/1.88);
@@ -27,8 +28,11 @@ getYearInJupiter(age){
   let jupiterYear = Math.floor(age/11.86);
   return jupiterYear;
 }
-getLifeExpectancyOnEarth(){
-  let yearsLeft = lifeExpectancy - this.age;
-  return yearsLeft;
-}
+getLifeExpectancyOnEarth(status){
+  let userLifeExpectancy = 0;
+  if (status === "Yes") {
+    userLifeExpectancy = lifeExpectancy - 10 - this.age}
+    else {userLifeExpectancy = lifeExpectancy - this.age}
+    return userLifeExpectancy;
+  }
 }

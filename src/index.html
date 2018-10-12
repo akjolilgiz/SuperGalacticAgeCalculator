@@ -5,6 +5,27 @@
     <title>SuperGalacticAgeCalculator</title>
   </head>
   <body>
-    <p>SuperGalacticAgeCalculator</p>
-  </body>
+    <div class="container">
+      <div class = "jumbotron">
+        <h1>Super Galactic Age Calculator</h1>
+      </div>
+      <form id="userInput">
+              <label for="userAge">Enter Age:</label>
+              <input type="text" class="form-control" id="userAge">
+              <label for="smoker">Do you smoke?</label>
+              <select class="form-control" id="smoker">
+                <option value = "Yes">Yes</option>
+                <option value = "No">No</option>
+              </select>
+          <button type="submit" class="btn btn-danger">Find out!</button>
+    </form>
+    <div id = "yearOfBirth"></div>
+    <div id = "ageInMercury"></div>
+    <div id = "ageInVenus"></div>
+    <div id = "ageInMars"></div>
+    <div id = "ageInJupiter"></div>
+    <div id = "lifeExpectancy"></div>
+
+  </div>
+</body>
 </html>
